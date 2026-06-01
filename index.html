@@ -1,71 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Marin Dupont</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="fusion.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="waves-bg"></div>
 
-    <header>
-        <nav>
-            <h2 class="logo">Portfolio</h2>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="particles" id="particles"></div>
 
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Salut, je suis <span>Ton Nom</span></h1>
-                <p>Développeur Web passionné par la création d'expériences modernes et performantes.</p>
-                <a href="#projects" class="btn">Voir mes projets</a>
-            </div>
+    <div class="wrapper">
+      <!-- NAV -->
+      <nav>
+        <a href="#" class="logo">M.D</a>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <p class="hero-tag">Designer & Développeur</p>
+          <h1>Amélie<br /><em>Fétiveau</em></h1>
+          <p class="hero-sub">
+            Recherche d'alternance en web ou en développement d'applications.
+          </p>
+          <a href="#projects" class="hero-cta">Explorer les projets ↓</a>
         </div>
-    </header>
+        <div class="hero-depth"></div>
+      </section>
 
-    <section id="about">
-        <h2>À propos</h2>
-        <p>
-            Je suis un développeur web spécialisé dans la création de sites modernes,
-            responsives et optimisés pour une excellente expérience utilisateur.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>Mes Projets</h2>
-
-        <div class="project-grid">
-
-            <div class="card">
-                <h3>Projet 1</h3>
-                <p>Description de ton projet.</p>
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="about-grid reveal">
+          <div class="about-text">
+            <p class="section-label">01 — À propos</p>
+            <h2 class="section-title">Qui<br />suis - <em>je</em></h2>
+            <div class="divider"></div>
+            <p>
+              Je m'appelle Amélie Fétiveau et j'ai 19 ans. Je suis actuellement
+              en étude d'informatique à l'IUT de Lannion en première année.
+            </p>
+            <p>
+              CJe suis actuellement en recherche d'alternance en développement
+              web ou en développement d'applications. J'apprécie de domaine et
+              j'aimerai en découvrir davantage dans ces 2 domaines.
+            </p>
+            <div class="skills-row">
+              <span class="skill-tag">HTML/CSS</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag"></span>
             </div>
-
-            <div class="card">
-                <h3>Projet 2</h3>
-                <p>Description de ton projet.</p>
-            </div>
-
-            <div class="card">
-                <h3>Projet 3</h3>
-                <p>Description de ton projet.</p>
-            </div>
-
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : contact@email.com</p>
-    </section>
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        style="max-width: 100%; padding-left: 0; padding-right: 0"
+      >
+        <div style="padding: 0 4rem; margin-bottom: 3rem" class="reveal">
+          <p class="section-label">02 — Projets</p>
+          <h2 class="section-title">Travaux <em>récents</em></h2>
+          <div class="divider"></div>
+        </div>
+        <div class="projects-grid reveal">
+          <div class="project-card">
+            <p class="project-num">001</p>
+            <h3>Site web sur la Nouvelle-Zélande</h3>
+            <p>
+              Plateforme de visualisation des données océanographiques.
+              Cartographie interactive des courants et températures en temps
+              réel.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-card">
+            <p class="project-num">002</p>
+            <h3>Base de données</h3>
+            <p>
+              Création d'une base de données pour un fournisseur d'électricité.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Visual Studio Code</span>
+            </div>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-card">
+            <p class="project-num">003</p>
+            <h3>Docker</h3>
+            <p>
+              Identité visuelle et site vitrine pour un collectif de
+              photographes sous-marins. Expérience défilement cinématographique.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">Bash</span>
+            </div>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-card">
+            <p class="project-num">004</p>
+            <h3>Écho Design System</h3>
+            <p>
+              Système de design pour une fintech. 200+ composants, documentation
+              interactive, thème sombre et accessibilité WCAG AA.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Design System</span>
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">Storybook</span>
+            </div>
+            <span class="project-arrow">↗</span>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-        <p>© 2026 - Mon Portfolio</p>
-    </footer>
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="contact-inner reveal">
+          <div class="contact-left">
+            <p class="section-label">03 — Contact</p>
+            <h2 class="section-title">Construisons<br /><em>ensemble</em></h2>
+            <div class="divider"></div>
+            <p>
+              Disponible pour des missions freelance, collaborations ou projets
+              à long terme. Je réponds sous 48h.
+            </p>
+            <a href="mailto:marin@dupont.design" class="contact-link"
+              >marin@dupont.design</a
+            >
+            <a href="#" class="contact-link">LinkedIn</a>
+            <a href="#" class="contact-link">GitHub</a>
+            <a href="#" class="contact-link">Dribbble</a>
+          </div>
+          <div class="contact-form">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" placeholder="Votre nom" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="votre@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Décrivez votre projet…"
+              ></textarea>
+            </div>
+            <button class="form-submit">Envoyer →</button>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <!-- FOOTER -->
+      <footer>
+        <p>© 2026 Marin Dupont — Tous droits réservés</p>
+        <div class="footer-depth">
+          <div class="pulse-dot"></div>
+          Disponible pour de nouvelles missions
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Particules bioluminescentes
+      const container = document.getElementById("particles");
+      for (let i = 0; i < 40; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        p.style.cssText = `
+      left: ${Math.random() * 100}%;
+      bottom: ${Math.random() * 20}%;
+      width: ${Math.random() * 2 + 1}px;
+      height: ${Math.random() * 2 + 1}px;
+      animation-duration: ${6 + Math.random() * 12}s;
+      animation-delay: ${Math.random() * 10}s;
+    `;
+        container.appendChild(p);
+      }
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((r) => io.observe(r));
+
+      // Nav scroll effect
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        nav.style.borderBottomColor =
+          window.scrollY > 50 ? "rgba(0,229,200,0.15)" : "rgba(0,229,200,0.08)";
+      });
+    </script>
+  </body>
 </html>
