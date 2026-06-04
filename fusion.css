@@ -84,24 +84,32 @@ nav > ul > li > a {
 }
 
 #Apercu > h1 {
-  height: auto;
-  width: auto;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
 
-  color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    line-height: 2;
 
-  font-size: 80px;
-  line-height: 2;
-}
+    /* Flou uniquement derrière le texte, sans rectangle */
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.4),
+        0 0 60px rgba(255, 255, 255, 0.2);
 
-#Apercu > h1 {
-  backdrop-filter: blur(50px);
+    backdrop-filter: none;
+    background: none;
+
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
 }
 
 
@@ -129,6 +137,38 @@ nav > ul > li > a {
   font-size: 20px;
 }
 
+
+
+/* ========== ANIMATION SECTION APERCU ========== */
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#Apercu > h1 {
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+#Apercu > h4 {
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+#Apercu > p {
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
 
 
 
