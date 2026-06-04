@@ -1,0 +1,301 @@
+/* ========== CSS À AJOUTER DANS fusion.css OU dans un fichier projets.css séparé ========== */
+
+/* Hint sous le carousel */
+.carousel-hint {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(174, 160, 255, 0.6);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Curseur pointer sur les images du carousel */
+#carouselImage .carousel-item a {
+    display: block;
+    cursor: pointer;
+}
+
+/* ========== PAGE PROJETS ========== */
+
+#tousLesProjets {
+    padding: 120px 40px 40px;
+    min-height: 100vh;
+    background-color: #00000071;
+    backdrop-filter: blur(50px);
+}
+
+.projets-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.projets-header h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.projets-header p {
+    font-size: 14px;
+    color: rgba(180, 170, 230, 0.7);
+}
+
+.projets-header .retour-lien {
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+/* ========== GRILLE DES CARTES ========== */
+
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projet-card {
+    background: rgba(30, 20, 60, 0.55);
+    border: 0.5px solid rgba(174, 160, 255, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), border-color 0.3s;
+}
+
+.projet-card:hover,
+.projet-card:focus-within {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(174, 160, 255, 0.7);
+}
+
+.card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+}
+
+.card-img-wrap a {
+    display: block;
+    height: 100%;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: saturate(0.7) brightness(0.85);
+}
+
+.projet-card:hover .card-img-wrap img {
+    transform: scale(1.07);
+    filter: saturate(1) brightness(1);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(83, 74, 183, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.projet-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(174, 160, 255, 0.18);
+    color: #d4cdff;
+    border: 0.5px solid rgba(174, 160, 255, 0.35);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
+.card-body {
+    padding: 1.1rem 1.25rem 1.3rem;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #e8e4ff;
+    margin-bottom: 6px;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: rgba(180, 170, 230, 0.8);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.card-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.tech-pill {
+    font-size: 11px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    background: rgba(83, 74, 183, 0.22);
+    color: #b4aaff;
+    border: 0.5px solid rgba(174, 160, 255, 0.2);
+}
+
+.card-link {
+    font-size: 12px;
+    color: #9d91f0;
+    text-decoration: none;
+    border: 0.5px solid rgba(174, 160, 255, 0.3);
+    border-radius: 6px;
+    padding: 5px 12px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.card-link:hover {
+    background: rgba(174, 160, 255, 0.12);
+    color: #c4b8ff;
+}
+
+/* ========== SECTIONS DÉTAIL ========== */
+
+.projet-detail {
+    padding: 60px 40px;
+    background-color: rgba(10, 5, 30, 0.75);
+    backdrop-filter: blur(50px);
+    border-top: 0.5px solid rgba(174, 160, 255, 0.15);
+    min-height: 60vh;
+}
+
+.detail-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.retour-lien {
+    display: inline-block;
+    font-size: 13px;
+    color: #9d91f0;
+    text-decoration: none;
+    margin-bottom: 30px;
+    border: 0.5px solid rgba(174, 160, 255, 0.3);
+    border-radius: 6px;
+    padding: 6px 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.retour-lien:hover {
+    background: rgba(174, 160, 255, 0.12);
+    color: #c4b8ff;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.detail-img-wrap img {
+    width: 100%;
+    border-radius: 12px;
+    border: 0.5px solid rgba(174, 160, 255, 0.2);
+    object-fit: cover;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-tag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: rgba(174, 160, 255, 0.18);
+    color: #d4cdff;
+    border: 0.5px solid rgba(174, 160, 255, 0.35);
+    display: inline-block;
+    width: fit-content;
+}
+
+.detail-content h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #e8e4ff;
+    line-height: 1.3;
+}
+
+.detail-content p {
+    font-size: 15px;
+    color: rgba(180, 170, 230, 0.85);
+    line-height: 1.7;
+}
+
+.detail-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.detail-btn {
+    display: inline-block;
+    width: fit-content;
+    font-size: 13px;
+    color: #9d91f0;
+    text-decoration: none;
+    border: 0.5px solid rgba(174, 160, 255, 0.4);
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 8px;
+}
+
+.detail-btn:hover {
+    background: rgba(174, 160, 255, 0.15);
+    color: #c4b8ff;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projet-detail {
+        padding: 40px 20px;
+    }
+
+    #tousLesProjets {
+        padding: 100px 20px 40px;
+    }
+
+    .projets-header .retour-lien {
+        position: static;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 20px;
+    }
+}
