@@ -455,6 +455,8 @@ footer {
   margin: 0;
   background-color: rgba(41, 89, 121, 0.872);
   position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /* ==========================================================================
